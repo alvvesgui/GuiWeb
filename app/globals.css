@@ -1,0 +1,204 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to futuristic black/gray theme */
+  --background: #0a0a0a;
+  --foreground: #e2e8f0;
+  --card: #1a1a1a;
+  --card-foreground: #e2e8f0;
+  --popover: #1a1a1a;
+  --popover-foreground: #e2e8f0;
+  --primary: #00d4ff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #2a2a2a;
+  --secondary-foreground: #e2e8f0;
+  --muted: #1e1e1e;
+  --muted-foreground: #94a3b8;
+  --accent: #00ff88;
+  --accent-foreground: #0a0a0a;
+  --destructive: #ff4444;
+  --destructive-foreground: #e2e8f0;
+  --border: #333333;
+  --input: #1a1a1a;
+  --ring: rgba(0, 212, 255, 0.5);
+  --chart-1: #00d4ff;
+  --chart-2: #00ff88;
+  --chart-3: #94a3b8;
+  --chart-4: #2a2a2a;
+  --chart-5: #ff4444;
+  --radius: 0.5rem;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #00d4ff;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #00ff88;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: #333333;
+  --sidebar-ring: rgba(0, 212, 255, 0.5);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #e2e8f0;
+  --card: #1a1a1a;
+  --card-foreground: #e2e8f0;
+  --popover: #1a1a1a;
+  --popover-foreground: #e2e8f0;
+  --primary: #00d4ff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #2a2a2a;
+  --secondary-foreground: #e2e8f0;
+  --muted: #1e1e1e;
+  --muted-foreground: #94a3b8;
+  --accent: #00ff88;
+  --accent-foreground: #0a0a0a;
+  --destructive: #ff4444;
+  --destructive-foreground: #e2e8f0;
+  --border: #333333;
+  --input: #1a1a1a;
+  --ring: rgba(0, 212, 255, 0.5);
+  --chart-1: #00d4ff;
+  --chart-2: #00ff88;
+  --chart-3: #94a3b8;
+  --chart-4: #2a2a2a;
+  --chart-5: #ff4444;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #00d4ff;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #00ff88;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: #333333;
+  --sidebar-ring: rgba(0, 212, 255, 0.5);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Added futuristic background pattern */
+    background-image: radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+      linear-gradient(90deg, transparent 49%, rgba(0, 212, 255, 0.03) 50%, transparent 51%),
+      linear-gradient(0deg, transparent 49%, rgba(0, 212, 255, 0.03) 50%, transparent 51%);
+    background-size: 100px 100px, 150px 150px, 20px 20px, 20px 20px;
+  }
+}
+
+/* Added futuristic animations and effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 30px rgba(0, 212, 255, 0.6);
+  }
+}
+
+@keyframes circuit {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-circuit {
+  animation: circuit 3s ease-in-out infinite;
+}
+
+/* Added futuristic grid pattern */
+.tech-grid {
+  background-image: linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.circuit-pattern {
+  background-image: radial-gradient(circle at 2px 2px, rgba(0, 212, 255, 0.3) 1px, transparent 0);
+  background-size: 20px 20px;
+}
