@@ -30,7 +30,7 @@ export function HeroSection() {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              Sou Guilherme, tenho 22 anos, sou formado em Análise e Desenvolvimento de Sistemas. Profissional de TI
+              Sou Guilherme, tenho 23 anos, sou formado em Análise e Desenvolvimento de Sistemas. Profissional de TI
               especializado em Low-Code, IA e automação de processos. Apaixonado por tecnologia, futebol e academia.
             </p>
 
